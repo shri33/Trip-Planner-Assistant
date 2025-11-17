@@ -1,0 +1,174 @@
+{
+  "requirements": {
+    "destination": "Paris, France",
+    "start_date": "2025-06-01",
+    "end_date": "2025-06-03",
+    "budget": 1500.0,
+    "num_travelers": 2,
+    "interests": [
+      "art",
+      "food",
+      "history"
+    ],
+    "dietary_restrictions": [],
+    "accommodation_preference": "hotel"
+  },
+  "days": [
+    {
+      "day_number": 1,
+      "date": "Day 1",
+      "activities": [
+        {
+          "name": "Morning: Top Attraction in Paris, France",
+          "time": "09:00",
+          "duration_hours": 2.5,
+          "cost": 25.0,
+          "category": "sightseeing",
+          "description": "Visit iconic landmark"
+        },
+        {
+          "name": "Lunch at Local Restaurant",
+          "time": "12:00",
+          "duration_hours": 1.5,
+          "cost": 30.0,
+          "category": "meal",
+          "description": "Experience local cuisine"
+        },
+        {
+          "name": "Afternoon: Cultural Experience",
+          "time": "14:00",
+          "duration_hours": 2.0,
+          "cost": 20.0,
+          "category": "culture",
+          "description": "Museum or cultural site"
+        },
+        {
+          "name": "Evening Dining",
+          "time": "19:00",
+          "duration_hours": 2.0,
+          "cost": 45.0,
+          "category": "meal",
+          "description": "Dinner at recommended restaurant"
+        }
+      ],
+      "total_cost": 120.0,
+      "notes": "Focus on art"
+    },
+    {
+      "day_number": 2,
+      "date": "Day 2",
+      "activities": [
+        {
+          "name": "Morning: Top Attraction in Paris, France",
+          "time": "09:00",
+          "duration_hours": 2.5,
+          "cost": 25.0,
+          "category": "sightseeing",
+          "description": "Visit iconic landmark"
+        },
+        {
+          "name": "Lunch at Local Restaurant",
+          "time": "12:00",
+          "duration_hours": 1.5,
+          "cost": 30.0,
+          "category": "meal",
+          "description": "Experience local cuisine"
+        },
+        {
+          "name": "Afternoon: Cultural Experience",
+          "time": "14:00",
+          "duration_hours": 2.0,
+          "cost": 20.0,
+          "category": "culture",
+          "description": "Museum or cultural site"
+        },
+        {
+          "name": "Evening Dining",
+          "time": "19:00",
+          "duration_hours": 2.0,
+          "cost": 45.0,
+          "category": "meal",
+          "description": "Dinner at recommended restaurant"
+        }
+      ],
+      "total_cost": 120.0,
+      "notes": "Focus on art"
+    },
+    {
+      "day_number": 3,
+      "date": "Day 3",
+      "activities": [
+        {
+          "name": "Morning: Top Attraction in Paris, France",
+          "time": "09:00",
+          "duration_hours": 2.5,
+          "cost": 25.0,
+          "category": "sightseeing",
+          "description": "Visit iconic landmark"
+        },
+        {
+          "name": "Lunch at Local Restaurant",
+          "time": "12:00",
+          "duration_hours": 1.5,
+          "cost": 30.0,
+          "category": "meal",
+          "description": "Experience local cuisine"
+        },
+        {
+          "name": "Afternoon: Cultural Experience",
+          "time": "14:00",
+          "duration_hours": 2.0,
+          "cost": 20.0,
+          "category": "culture",
+          "description": "Museum or cultural site"
+        },
+        {
+          "name": "Evening Dining",
+          "time": "19:00",
+          "duration_hours": 2.0,
+          "cost": 45.0,
+          "category": "meal",
+          "description": "Dinner at recommended restaurant"
+        }
+      ],
+      "total_cost": 120.0,
+      "notes": "Focus on art"
+    }
+  ],
+  "budget": {
+    "accommodation": 360.0,
+    "activities": 135.0,
+    "meals": 225.0,
+    "transportation": 100.0,
+    "total": 820.0,
+    "within_budget": true,
+    "savings_suggestions": []
+  },
+  "bookings": [
+    {
+      "name": "Downtown Hotel",
+      "type": "hotel",
+      "price": 120.0,
+      "rating": 4.5,
+      "url": "",
+      "features": [
+        "Free WiFi",
+        "Breakfast included",
+        "Central location"
+      ]
+    },
+    {
+      "name": "Budget Inn",
+      "type": "hotel",
+      "price": 75.0,
+      "rating": 3.8,
+      "url": "",
+      "features": [
+        "Free parking",
+        "Airport shuttle"
+      ]
+    }
+  ],
+  "created_at": "2025-11-17T19:27:23.849781",
+  "iteration_count": 1
+}

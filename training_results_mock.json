@@ -1,0 +1,611 @@
+{
+  "mode": "mock",
+  "note": "Fast training with mock LLM responses - demonstrates architecture and evaluation. For real training, use train_agent.py with Gemini API.",
+  "scenarios": [
+    {
+      "name": "Tokyo Budget",
+      "requirements": {
+        "destination": "Tokyo, Japan",
+        "budget": 800.0,
+        "num_travelers": 2,
+        "duration_days": 3,
+        "interests": [
+          "culture",
+          "food",
+          "temples"
+        ],
+        "accommodation_preference": "budget"
+      },
+      "itinerary": {
+        "destination": "Tokyo, Japan",
+        "activities": [
+          {
+            "day": 1,
+            "time": "09:00",
+            "name": "Morning culture",
+            "category": "culture",
+            "estimated_cost": 20,
+            "duration_hours": 2.0,
+            "description": "Morning exploration"
+          },
+          {
+            "day": 1,
+            "time": "12:00",
+            "name": "Lunch",
+            "category": "food",
+            "estimated_cost": 14.0,
+            "duration_hours": 1.5,
+            "description": "Local cuisine"
+          },
+          {
+            "day": 1,
+            "time": "14:00",
+            "name": "Afternoon food",
+            "category": "food",
+            "estimated_cost": 24.0,
+            "duration_hours": 3.0,
+            "description": "Main attraction"
+          },
+          {
+            "day": 1,
+            "time": "19:00",
+            "name": "Dinner",
+            "category": "food",
+            "estimated_cost": 30.0,
+            "duration_hours": 2.0,
+            "description": "Evening dining"
+          },
+          {
+            "day": 2,
+            "time": "09:00",
+            "name": "Morning culture",
+            "category": "culture",
+            "estimated_cost": 20,
+            "duration_hours": 2.0,
+            "description": "Morning exploration"
+          },
+          {
+            "day": 2,
+            "time": "12:00",
+            "name": "Lunch",
+            "category": "food",
+            "estimated_cost": 14.0,
+            "duration_hours": 1.5,
+            "description": "Local cuisine"
+          },
+          {
+            "day": 2,
+            "time": "14:00",
+            "name": "Afternoon food",
+            "category": "food",
+            "estimated_cost": 24.0,
+            "duration_hours": 3.0,
+            "description": "Main attraction"
+          },
+          {
+            "day": 2,
+            "time": "19:00",
+            "name": "Dinner",
+            "category": "food",
+            "estimated_cost": 30.0,
+            "duration_hours": 2.0,
+            "description": "Evening dining"
+          },
+          {
+            "day": 3,
+            "time": "09:00",
+            "name": "Morning culture",
+            "category": "culture",
+            "estimated_cost": 20,
+            "duration_hours": 2.0,
+            "description": "Morning exploration"
+          },
+          {
+            "day": 3,
+            "time": "12:00",
+            "name": "Lunch",
+            "category": "food",
+            "estimated_cost": 14.0,
+            "duration_hours": 1.5,
+            "description": "Local cuisine"
+          },
+          {
+            "day": 3,
+            "time": "14:00",
+            "name": "Afternoon food",
+            "category": "food",
+            "estimated_cost": 24.0,
+            "duration_hours": 3.0,
+            "description": "Main attraction"
+          },
+          {
+            "day": 3,
+            "time": "19:00",
+            "name": "Dinner",
+            "category": "food",
+            "estimated_cost": 30.0,
+            "duration_hours": 2.0,
+            "description": "Evening dining"
+          }
+        ],
+        "accommodations": [
+          {
+            "name": "Tokyo Budget Hotel",
+            "type": "hotel",
+            "price_per_night": 60.0,
+            "rating": 4.0,
+            "amenities": [
+              "wifi",
+              "breakfast"
+            ]
+          },
+          {
+            "name": "Tokyo Central Inn",
+            "type": "hotel",
+            "price_per_night": 51.0,
+            "rating": 3.8,
+            "amenities": [
+              "wifi",
+              "breakfast"
+            ]
+          }
+        ],
+        "total_cost": 444.0,
+        "budget": 800.0,
+        "iteration_count": 1
+      },
+      "scores": {
+        "budget_adherence": 1.0,
+        "day_coverage": 1.0,
+        "activity_density": 1.0,
+        "preference_matching": 0.6666666666666666,
+        "iteration_efficiency": 1.0,
+        "overall": 0.9333333333333333
+      }
+    },
+    {
+      "name": "Paris Luxury",
+      "requirements": {
+        "destination": "Paris, France",
+        "budget": 2500.0,
+        "num_travelers": 1,
+        "duration_days": 4,
+        "interests": [
+          "art",
+          "fine dining",
+          "history",
+          "shopping"
+        ],
+        "accommodation_preference": "luxury"
+      },
+      "itinerary": {
+        "destination": "Paris, France",
+        "activities": [
+          {
+            "day": 1,
+            "time": "09:00",
+            "name": "Morning art",
+            "category": "art",
+            "estimated_cost": 60,
+            "duration_hours": 2.0,
+            "description": "Morning exploration"
+          },
+          {
+            "day": 1,
+            "time": "12:00",
+            "name": "Lunch",
+            "category": "food",
+            "estimated_cost": 42.0,
+            "duration_hours": 1.5,
+            "description": "Local cuisine"
+          },
+          {
+            "day": 1,
+            "time": "14:00",
+            "name": "Afternoon fine dining",
+            "category": "fine dining",
+            "estimated_cost": 72.0,
+            "duration_hours": 3.0,
+            "description": "Main attraction"
+          },
+          {
+            "day": 1,
+            "time": "19:00",
+            "name": "Dinner",
+            "category": "food",
+            "estimated_cost": 90.0,
+            "duration_hours": 2.0,
+            "description": "Evening dining"
+          },
+          {
+            "day": 2,
+            "time": "09:00",
+            "name": "Morning art",
+            "category": "art",
+            "estimated_cost": 60,
+            "duration_hours": 2.0,
+            "description": "Morning exploration"
+          },
+          {
+            "day": 2,
+            "time": "12:00",
+            "name": "Lunch",
+            "category": "food",
+            "estimated_cost": 42.0,
+            "duration_hours": 1.5,
+            "description": "Local cuisine"
+          },
+          {
+            "day": 2,
+            "time": "14:00",
+            "name": "Afternoon fine dining",
+            "category": "fine dining",
+            "estimated_cost": 72.0,
+            "duration_hours": 3.0,
+            "description": "Main attraction"
+          },
+          {
+            "day": 2,
+            "time": "19:00",
+            "name": "Dinner",
+            "category": "food",
+            "estimated_cost": 90.0,
+            "duration_hours": 2.0,
+            "description": "Evening dining"
+          },
+          {
+            "day": 3,
+            "time": "09:00",
+            "name": "Morning art",
+            "category": "art",
+            "estimated_cost": 60,
+            "duration_hours": 2.0,
+            "description": "Morning exploration"
+          },
+          {
+            "day": 3,
+            "time": "12:00",
+            "name": "Lunch",
+            "category": "food",
+            "estimated_cost": 42.0,
+            "duration_hours": 1.5,
+            "description": "Local cuisine"
+          },
+          {
+            "day": 3,
+            "time": "14:00",
+            "name": "Afternoon fine dining",
+            "category": "fine dining",
+            "estimated_cost": 72.0,
+            "duration_hours": 3.0,
+            "description": "Main attraction"
+          },
+          {
+            "day": 3,
+            "time": "19:00",
+            "name": "Dinner",
+            "category": "food",
+            "estimated_cost": 90.0,
+            "duration_hours": 2.0,
+            "description": "Evening dining"
+          },
+          {
+            "day": 4,
+            "time": "09:00",
+            "name": "Morning art",
+            "category": "art",
+            "estimated_cost": 60,
+            "duration_hours": 2.0,
+            "description": "Morning exploration"
+          },
+          {
+            "day": 4,
+            "time": "12:00",
+            "name": "Lunch",
+            "category": "food",
+            "estimated_cost": 42.0,
+            "duration_hours": 1.5,
+            "description": "Local cuisine"
+          },
+          {
+            "day": 4,
+            "time": "14:00",
+            "name": "Afternoon fine dining",
+            "category": "fine dining",
+            "estimated_cost": 72.0,
+            "duration_hours": 3.0,
+            "description": "Main attraction"
+          },
+          {
+            "day": 4,
+            "time": "19:00",
+            "name": "Dinner",
+            "category": "food",
+            "estimated_cost": 90.0,
+            "duration_hours": 2.0,
+            "description": "Evening dining"
+          }
+        ],
+        "accommodations": [
+          {
+            "name": "Paris Luxury Hotel",
+            "type": "hotel",
+            "price_per_night": 250.0,
+            "rating": 4.8,
+            "amenities": [
+              "spa",
+              "pool",
+              "concierge",
+              "fine dining"
+            ]
+          },
+          {
+            "name": "Paris Central Inn",
+            "type": "hotel",
+            "price_per_night": 212.5,
+            "rating": 4.6,
+            "amenities": [
+              "spa",
+              "pool"
+            ]
+          }
+        ],
+        "total_cost": 2056.0,
+        "budget": 2500.0,
+        "iteration_count": 1
+      },
+      "scores": {
+        "budget_adherence": 1.0,
+        "day_coverage": 1.0,
+        "activity_density": 1.0,
+        "preference_matching": 0.5,
+        "iteration_efficiency": 1.0,
+        "overall": 0.9
+      }
+    },
+    {
+      "name": "Orlando Family",
+      "requirements": {
+        "destination": "Orlando, Florida",
+        "budget": 1500.0,
+        "num_travelers": 4,
+        "duration_days": 5,
+        "interests": [
+          "theme parks",
+          "family activities",
+          "entertainment"
+        ],
+        "accommodation_preference": "mid-range"
+      },
+      "itinerary": {
+        "destination": "Orlando, Florida",
+        "activities": [
+          {
+            "day": 1,
+            "time": "09:00",
+            "name": "Morning theme parks",
+            "category": "theme parks",
+            "estimated_cost": 30,
+            "duration_hours": 2.0,
+            "description": "Morning exploration"
+          },
+          {
+            "day": 1,
+            "time": "12:00",
+            "name": "Lunch",
+            "category": "food",
+            "estimated_cost": 21.0,
+            "duration_hours": 1.5,
+            "description": "Local cuisine"
+          },
+          {
+            "day": 1,
+            "time": "14:00",
+            "name": "Afternoon family activities",
+            "category": "family activities",
+            "estimated_cost": 36.0,
+            "duration_hours": 3.0,
+            "description": "Main attraction"
+          },
+          {
+            "day": 1,
+            "time": "19:00",
+            "name": "Dinner",
+            "category": "food",
+            "estimated_cost": 45.0,
+            "duration_hours": 2.0,
+            "description": "Evening dining"
+          },
+          {
+            "day": 2,
+            "time": "09:00",
+            "name": "Morning theme parks",
+            "category": "theme parks",
+            "estimated_cost": 30,
+            "duration_hours": 2.0,
+            "description": "Morning exploration"
+          },
+          {
+            "day": 2,
+            "time": "12:00",
+            "name": "Lunch",
+            "category": "food",
+            "estimated_cost": 21.0,
+            "duration_hours": 1.5,
+            "description": "Local cuisine"
+          },
+          {
+            "day": 2,
+            "time": "14:00",
+            "name": "Afternoon family activities",
+            "category": "family activities",
+            "estimated_cost": 36.0,
+            "duration_hours": 3.0,
+            "description": "Main attraction"
+          },
+          {
+            "day": 2,
+            "time": "19:00",
+            "name": "Dinner",
+            "category": "food",
+            "estimated_cost": 45.0,
+            "duration_hours": 2.0,
+            "description": "Evening dining"
+          },
+          {
+            "day": 3,
+            "time": "09:00",
+            "name": "Morning theme parks",
+            "category": "theme parks",
+            "estimated_cost": 30,
+            "duration_hours": 2.0,
+            "description": "Morning exploration"
+          },
+          {
+            "day": 3,
+            "time": "12:00",
+            "name": "Lunch",
+            "category": "food",
+            "estimated_cost": 21.0,
+            "duration_hours": 1.5,
+            "description": "Local cuisine"
+          },
+          {
+            "day": 3,
+            "time": "14:00",
+            "name": "Afternoon family activities",
+            "category": "family activities",
+            "estimated_cost": 36.0,
+            "duration_hours": 3.0,
+            "description": "Main attraction"
+          },
+          {
+            "day": 3,
+            "time": "19:00",
+            "name": "Dinner",
+            "category": "food",
+            "estimated_cost": 45.0,
+            "duration_hours": 2.0,
+            "description": "Evening dining"
+          },
+          {
+            "day": 4,
+            "time": "09:00",
+            "name": "Morning theme parks",
+            "category": "theme parks",
+            "estimated_cost": 30,
+            "duration_hours": 2.0,
+            "description": "Morning exploration"
+          },
+          {
+            "day": 4,
+            "time": "12:00",
+            "name": "Lunch",
+            "category": "food",
+            "estimated_cost": 21.0,
+            "duration_hours": 1.5,
+            "description": "Local cuisine"
+          },
+          {
+            "day": 4,
+            "time": "14:00",
+            "name": "Afternoon family activities",
+            "category": "family activities",
+            "estimated_cost": 36.0,
+            "duration_hours": 3.0,
+            "description": "Main attraction"
+          },
+          {
+            "day": 4,
+            "time": "19:00",
+            "name": "Dinner",
+            "category": "food",
+            "estimated_cost": 45.0,
+            "duration_hours": 2.0,
+            "description": "Evening dining"
+          },
+          {
+            "day": 5,
+            "time": "09:00",
+            "name": "Morning theme parks",
+            "category": "theme parks",
+            "estimated_cost": 30,
+            "duration_hours": 2.0,
+            "description": "Morning exploration"
+          },
+          {
+            "day": 5,
+            "time": "12:00",
+            "name": "Lunch",
+            "category": "food",
+            "estimated_cost": 21.0,
+            "duration_hours": 1.5,
+            "description": "Local cuisine"
+          },
+          {
+            "day": 5,
+            "time": "14:00",
+            "name": "Afternoon family activities",
+            "category": "family activities",
+            "estimated_cost": 36.0,
+            "duration_hours": 3.0,
+            "description": "Main attraction"
+          },
+          {
+            "day": 5,
+            "time": "19:00",
+            "name": "Dinner",
+            "category": "food",
+            "estimated_cost": 45.0,
+            "duration_hours": 2.0,
+            "description": "Evening dining"
+          }
+        ],
+        "accommodations": [
+          {
+            "name": "Orlando Mid-Range Hotel",
+            "type": "hotel",
+            "price_per_night": 120.0,
+            "rating": 4.4,
+            "amenities": [
+              "wifi",
+              "breakfast",
+              "gym",
+              "room service"
+            ]
+          },
+          {
+            "name": "Orlando Central Inn",
+            "type": "hotel",
+            "price_per_night": 102.0,
+            "rating": 4.2,
+            "amenities": [
+              "wifi",
+              "breakfast"
+            ]
+          }
+        ],
+        "total_cost": 1260.0,
+        "budget": 1500.0,
+        "iteration_count": 1
+      },
+      "scores": {
+        "budget_adherence": 1.0,
+        "day_coverage": 1.0,
+        "activity_density": 1.0,
+        "preference_matching": 0.6666666666666666,
+        "iteration_efficiency": 1.0,
+        "overall": 0.9333333333333333
+      }
+    }
+  ],
+  "average_scores": {
+    "budget_adherence": 1.0,
+    "day_coverage": 1.0,
+    "activity_density": 1.0,
+    "preference_matching": 0.611111111111111,
+    "iteration_efficiency": 1.0,
+    "overall": 0.9222222222222222
+  },
+  "training_date": "2025-11-17T19:58:35.097296"
+}
