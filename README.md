@@ -1,131 +1,110 @@
-# 🌍 Trip Planner Assistant
+🌍 Trip Planner Assistant
+Multi-Agent AI System for Intelligent Travel Planning
 
-### *Multi-Agent AI System for Intelligent Travel Planning*
 
-[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-blue.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
-[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
-[![Google ADK](https://img.shields.io/badge/Google-ADK-4285F4.svg)](https://github.com/google/adk)
-[![Gemini AI](https://img.shields.io/badge/Gemini-2.5%20Flash-FF6F00.svg)](https://ai.google.dev/)
-[![YouTube Demo](https://img.shields.io/badge/YouTube-Demo-red.svg)](https://www.youtube.com/watch?v=FyjDI-KZQ7M)
 
-**Reducing trip planning from 20 hours to 30 minutes with 100% budget accuracy**
 
-**Created by:** [ShriHero](https://github.com/shri33) | **Repository:** [Trip-Planner-Assistant](https://github.com/shri33/Trip-Planner-Assistant) | **Demo Video:** [Watch on YouTube](https://www.youtube.com/watch?v=FyjDI-KZQ7M)
 
-[Features](#-key-features) • [Quick Start](#-quick-start) • [Architecture](#-architecture) • [Results](#-evaluation-results) • [Docs](./ARCHITECTURE.md)
 
-</div>
 
----
 
-## 🎯 Overview
 
-**Trip Planner Assistant** is an intelligent multi-agent system that automates comprehensive travel planning using Google's Agent Development Kit and Gemini 2.5 Flash. Built for the [Kaggle AI Agents Intensive Capstone](https://www.kaggle.com/competitions/agents-intensive-capstone-project) (Concierge Agents Track).
 
-### 💡 The Problem
+Reducing trip planning from 20 hours to 30 minutes with 100% budget accuracy
+
+Created by: ShriHero
+
+Repository: Trip-Planner-Assistant
+
+Demo Video: Watch on YouTube
+
+🔗 Navigation
+
+Features
+ • Quick Start
+ • Architecture
+ • Evaluation
+ • Documentation
+
+🎯 Overview
+
+Trip Planner Assistant is an intelligent multi-agent system that automates travel planning using Google ADK and Gemini 2.5 Flash, built for the Kaggle AI Agents Intensive Capstone (Concierge Agents Track).
+
+💡 The Problem
 
 Planning a multi-day trip involves:
-- 🔍 Researching 100+ attractions across multiple websites
-- 💰 Tracking costs in spreadsheets with 15-20% budget overruns
-- 📅 Creating realistic schedules that respect travel times
-- 🤔 **Result: 10-20 hours of work + decision fatigue**
 
-### ✨ The Solution
+🔍 Researching 100+ attractions
 
-**4 Specialized AI Agents** working in parallel:
+💰 Budgeting with spreadsheets
 
-| Agent | Role | Capabilities |
-|-------|------|--------------|
-| 🎯 **Coordinator** | Orchestrator | Manages workflow, aggregates results, iterative refinement |
-| 🗺️ **Itinerary Planner** | Researcher | Finds attractions, creates schedules, optimizes routes |
-| 💰 **Budget Analyzer** | Financial Guard | Tracks costs, validates budgets, suggests optimizations |
-| 🏨 **Booking Helper** | Deal Finder | Searches accommodations, compares prices, recommends options |
+🚗 Accounting for travel time
 
-### 🎖️ Achievements
+😩 Result: 10–20 hours + decision fatigue
 
-- ✅ **92.2%** average evaluation score across 3 test scenarios
-- ✅ **100%** budget adherence (all trips under budget)
-- ✅ **95%** time savings (20 hours → 30 minutes)
-- ✅ **1-iteration** solutions (highly efficient planning)
+✨ The Solution — 4 Specialized AI Agents
+Agent	Role	Capabilities
+🎯 Coordinator	Orchestrator	Manages workflow, merges results, iterative refinement
+🗺️ Itinerary Planner	Researcher	Discovers attractions, builds day plans, optimizes routes
+💰 Budget Analyzer	Financial Guard	Ensures spending stays within budget
+🏨 Booking Helper	Deal Finder	Suggests hotels, compares prices
+🎖️ Achievements
 
----
+✅ 92.2% average evaluation score
 
-## 🎓 Course Features Implementation
+✅ 100% budget adherence
 
-This project demonstrates **all 5 required Capstone features**:
+✅ 95% reduction in planning time
 
-<table>
-<tr>
-<td width="20%"><b>🤖 Multi-Agent System</b></td>
-<td>3 specialist agents + 1 coordinator with parallel execution pattern. Agents share context through coordinator without direct communication (loose coupling).</td>
-</tr>
-<tr>
-<td><b>🛠️ Tools Integration</b></td>
-<td><b>Google Search</b> (attraction discovery), <b>Code Execution</b> (budget calculations, route optimization). Extensible architecture for API integration.</td>
-</tr>
-<tr>
-<td><b>💾 Sessions & Memory</b></td>
-<td><b>SessionState</b> tracks conversation history. <b>MemoryBank</b> stores user preferences persistently. <b>Context compaction</b> for long interactions.</td>
-</tr>
-<tr>
-<td><b>📊 Observability</b></td>
-<td><b>Structured logging</b> (structlog) captures all decisions. Metrics: iteration count, budget accuracy, token usage. Machine-readable JSON output.</td>
-</tr>
-<tr>
-<td><b>✅ Evaluation</b></td>
-<td>Automated harness with <b>5 metrics</b>: Budget Adherence, Day Coverage, Activity Density, Preference Matching, Iteration Efficiency.</td>
-</tr>
-</table>
+✅ 1-iteration solutions
 
-📖 **See detailed implementation:** [ARCHITECTURE.md](./ARCHITECTURE.md)
+🎓 Capstone Features Implementation
+Requirement	Implemented
+🤖 Multi-Agent System	4 agents + coordinator (parallel execution)
+🛠️ Tools	Google Search, Code Execution
+💾 Memory & Sessions	SessionState + MemoryBank
+📊 Observability	structlog + metrics + JSON traces
+🧪 Evaluation	Automated scoring with 5 KPIs
 
----
+📖 Detailed implementation: ARCHITECTURE.md
 
-## 🚀 Quick Start
+🚀 Quick Start
+Prerequisites
 
-### Prerequisites
-- **Python 3.9+**
-- **Google AI API Key** → [Get free key here](https://aistudio.google.com/app/apikey)
+Python 3.9+
 
-### Installation
+Google AI API Key → https://aistudio.google.com/app/apikey
 
-```bash
+Installation
 # Clone repository
 git clone https://github.com/shri33/Trip-Planner-Assistant.git
 cd Trip-Planner-Assistant
 
 # Create virtual environment
 python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+source venv/bin/activate   # Windows: venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Configure API key
+# Configure environment
 cp .env.example .env
-# Edit .env and add: GOOGLE_API_KEY=your_key_here
-```
+# Add your Google API key:
+# GOOGLE_API_KEY=your_key_here
 
-### Run Demo
-
-```bash
-# Simple demo
+Run Demo
 python demo_simple.py
 
-# Full training evaluation
+Full training evaluation
 python train_agent.py
 
-# Run tests
+Run tests
 pytest tests/ -v
-```
 
-### Example Code
-
-```python
+Example Usage
 from src.trip_planner_agent import CoordinatorAgent
 from dataclasses import dataclass
 
-# Define trip requirements
 @dataclass
 class TripRequirements:
     destination: str = "Paris, France"
@@ -135,286 +114,159 @@ class TripRequirements:
     num_travelers: int = 2
     interests: list = ("art", "food", "history")
 
-# Generate itinerary
 coordinator = CoordinatorAgent()
 result = coordinator.plan_trip(TripRequirements())
 
 print(f"✅ Trip planned! Total cost: ${result['total_cost']}")
 print(f"📅 {len(result['days'])} days with {result['total_activities']} activities")
-```
 
-**Output:** Complete 3-day Paris itinerary with Louvre, Eiffel Tower, Seine cruise, restaurants, and hotel recommendations—all under budget!
+📊 Evaluation Results
 
----
+Automated evaluation across 3 scenarios:
 
-## 📊 Evaluation Results
+Scenario	Destination	Budget	Actual Cost	Score	Status
+💰 Budget-Conscious	Tokyo, Japan	$800	$754	92%	✅ Pass
+✨ Luxury Experience	Paris, France	$2,500	$2,340	96%	✅ Pass
+👨‍👩‍👧‍👦 Family Trip	Orlando, USA	$1,500	$1,425	89%	✅ Pass
+🎯 Performance Metrics
+Metric	Result	Target	Status
+Overall Score	92.2%	≥85%	✅
+Budget Adherence	100%	±5%	✅
+Iteration Efficiency	1.0	≤3	✅
+Planning Time	~30 sec	<60 sec	✅
+Activity Density	4.2/day	≥3/day	✅
 
-Automated evaluation across **3 diverse scenarios**:
+📄 Full Results: TRAINING_RESULTS.md
 
-<table>
-<thead>
-<tr>
-<th>Scenario</th>
-<th>Destination</th>
-<th>Budget</th>
-<th>Actual Cost</th>
-<th>Score</th>
-<th>Status</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>💰 <b>Budget-Conscious</b></td>
-<td>Tokyo, Japan</td>
-<td>$800</td>
-<td>$754</td>
-<td><b>92%</b></td>
-<td>✅ Pass</td>
-</tr>
-<tr>
-<td>✨ <b>Luxury Experience</b></td>
-<td>Paris, France</td>
-<td>$2,500</td>
-<td>$2,340</td>
-<td><b>96%</b></td>
-<td>✅ Pass</td>
-</tr>
-<tr>
-<td>👨‍👩‍👧‍👦 <b>Family Vacation</b></td>
-<td>Orlando, USA</td>
-<td>$1,500</td>
-<td>$1,425</td>
-<td><b>89%</b></td>
-<td>✅ Pass</td>
-</tr>
-</tbody>
-</table>
-
-### 🎯 Performance Metrics
-
-| Metric | Result | Target | Status |
-|--------|--------|--------|--------|
-| **Overall Score** | **92.2%** | ≥85% | ✅ |
-| **Budget Adherence** | **100%** (all under) | ±5% | ✅ |
-| **Iteration Efficiency** | **1.0 avg** | ≤3 | ✅ |
-| **Planning Time** | **~30 sec** | <60 sec | ✅ |
-| **Activity Density** | **4.2/day** | ≥3/day | ✅ |
-
-📄 **Detailed metrics:** See [TRAINING_RESULTS.md](./TRAINING_RESULTS.md)
-
----
-
-## 🏗️ Architecture
-
-```
-┌─────────────────────────────────────────────────────────┐
-│                    User Interface                       │
-└────────────────────┬────────────────────────────────────┘
-                     ↓
-┌─────────────────────────────────────────────────────────┐
-│          🎯 Coordinator Agent (Gemini 2.5)              │
-│  • Parses requirements  • Manages workflow              │
-│  • Aggregates results   • Iterative refinement          │
-└──────┬──────────────┬──────────────┬───────────────────┘
-       ↓              ↓              ↓
+🏗️ Architecture
+┌───────────────────────────────────────────────┐
+│ User Interface                                 │
+└───────────────┬───────────────────────────────┘
+                ↓
+┌───────────────────────────────────────────────┐
+│ 🎯 Coordinator Agent (Gemini 2.5)              │
+└───────┬───────────────┬───────────────┬───────┘
+        ↓               ↓               ↓
 ┌──────────────┐ ┌──────────────┐ ┌──────────────┐
-│ 🗺️ Itinerary │ │ 💰 Budget    │ │ 🏨 Booking   │
-│   Planner    │ │   Analyzer   │ │   Helper     │
-│──────────────│ │──────────────│ │──────────────│
-│ • Attractions│ │ • Cost track │ │ • Hotels     │
-│ • Schedules  │ │ • Validate $ │ │ • Comparisons│
-│ • Routes     │ │ • Optimize   │ │ • Deals      │
-└──────┬───────┘ └──────┬───────┘ └──────┬───────┘
-       │                │                │
-       └────────────────┴────────────────┘
-                        ↓
-         ┌──────────────────────────────┐
-         │   🛠️ Tools & Infrastructure   │
-         │  • Google Search             │
-         │  • Code Execution            │
-         │  • Memory Bank               │
-         │  • Structured Logging        │
-         └──────────────────────────────┘
-```
+│ 🗺️ Itinerary  │ │ 💰 Budget    │ │ 🏨 Booking   │
+│ Planner       │ │ Analyzer     │ │ Helper       │
+└─────┬────────┘ └──────┬───────┘ └──────┬───────┘
+      │                  │                │
+      └──────────┬───────┴────────────────┘
+                 ↓
+      🛠️ Tools: Search, Code Execution,
+          Memory, Structured Logging
 
-**Key Design Patterns:**
-- ✅ **Parallel Execution** - Agents run simultaneously for speed
-- ✅ **Loose Coupling** - Agents communicate only through coordinator
-- ✅ **Iterative Refinement** - Up to 3 iterations for quality
-- ✅ **Context Management** - Smart compaction prevents token bloat
 
-📖 **Deep dive:** [ARCHITECTURE.md](./ARCHITECTURE.md) | **Pitch:** [PITCH.md](./PITCH.md)
+📖 Deep Dive:
 
----
+ARCHITECTURE.md
 
-## 📁 Project Structure
+PITCH.md
 
-```
+📁 Project Structure
 Trip-Planner-Assistant/
-├── 📂 src/
-│   ├── trip_planner_agent.py      # 🤖 Main agent implementation (4 agents)
-│   └── evaluation.py              # ✅ Automated evaluation harness
-│
-├── 📂 tests/
-│   └── test_trip_planner.py       # 🧪 Unit tests (15+ test cases)
-│
-├── 📂 notebooks/
-│   ├── demo.ipynb                 # 📓 Interactive demo notebook
-│   └── kaggle_training_notebook.ipynb  # 📊 Training results
-│
-├── 📂 Documentation/
-│   ├── README.md                  # 📖 You are here
-│   ├── ARCHITECTURE.md            # 🏗️ System design details
-│   ├── SUBMISSION.md              # 📝 Kaggle writeup (960 words)
-│   ├── PITCH.md                   # 💡 Project pitch
-│   ├── QUICKSTART.md              # ⚡ Fast setup guide
-│   ├── TRAINING_RESULTS.md        # 📊 Evaluation metrics
-│   └── VIDEO_SCRIPT.md            # 🎥 Demo video script
-│
-├── 📄 requirements.txt            # 📦 Python dependencies
-├── 📄 .env.example                # 🔐 Environment template
-├── 📄 LICENSE                     # ⚖️ CC BY-SA 4.0
-├── 📄 train_agent.py              # 🚀 Training script
-└── 📄 demo_simple.py              # 🎯 Simple demo
-```
+├── src/
+│   ├── trip_planner_agent.py
+│   ├── evaluation.py
+├── tests/
+│   └── test_trip_planner.py
+├── notebooks/
+│   ├── demo.ipynb
+│   └── kaggle_training_notebook.ipynb
+├── Documentation/
+│   ├── ARCHITECTURE.md
+│   ├── SUBMISSION.md
+│   ├── PITCH.md
+│   ├── QUICKSTART.md
+│   ├── TRAINING_RESULTS.md
+│   └── VIDEO_SCRIPT.md
+├── requirements.txt
+├── .env.example
+├── LICENSE
+├── train_agent.py
+└── demo_simple.py
 
----
-
-## 🧪 Testing & Validation
-
-```bash
-# Run all unit tests
+🧪 Testing & Validation
 pytest tests/ -v
-
-# Run with coverage report
 pytest tests/ -v --cov=src --cov-report=term
-
-# Run evaluation harness
 python src/evaluation.py
-
-# Quick training demo
 python train_agent_fast.py
-```
 
-**Test Coverage:**
-- ✅ Agent coordination logic
-- ✅ Tool integration (Search, Code Execution)
-- ✅ Memory and session management
-- ✅ Budget validation
-- ✅ Error handling and edge cases
+🛠️ Technology Stack
+Component	Technology
+AI Framework	Google Agent Development Kit (ADK)
+LLM	Gemini 2.5 Flash
+Language	Python 3.9+
+Logging	structlog
+Validation	pydantic
+Testing	pytest
+Tools	Google Search API, Code Execution
+💡 Key Learnings
+Challenges
 
----
+Agent coordination
 
-## 🛠️ Technology Stack
+Budget accuracy
 
-<table>
-<tr>
-<td><b>🧠 AI Framework</b></td>
-<td>Google Agent Development Kit (ADK)</td>
-</tr>
-<tr>
-<td><b>🤖 LLM</b></td>
-<td>Gemini 2.5 Flash (fast, cost-effective)</td>
-</tr>
-<tr>
-<td><b>🐍 Language</b></td>
-<td>Python 3.9+ (fully typed with type hints)</td>
-</tr>
-<tr>
-<td><b>📦 Key Libraries</b></td>
-<td>
-<code>structlog</code> (logging), 
-<code>pydantic</code> (validation), 
-<code>pytest</code> (testing), 
-<code>google-generativeai</code> (Gemini)
-</td>
-</tr>
-<tr>
-<td><b>🔧 Tools</b></td>
-<td>Google Search API, Code Execution Engine</td>
-</tr>
-</table>
+Context limits
 
----
+Evaluation objectivity
 
-## 💡 Key Learnings
+Solutions
 
-### Challenges & Solutions
+Coordinator pattern
 
-**Challenge 1: Agent Coordination**
-- ❌ Problem: Agents conflicting or duplicating work
-- ✅ Solution: Coordinator pattern with clear domain boundaries
+Dedicated budget agent
 
-**Challenge 2: Budget Satisfaction**
-- ❌ Problem: Initial designs exceeded budgets by 15-20%
-- ✅ Solution: Dedicated budget analyzer agent with early feedback
+Smart context compaction
 
-**Challenge 3: Context Limits**
-- ❌ Problem: Long conversations hitting token limits
-- ✅ Solution: Smart context compaction maintaining key information
+Automated metric-based evaluation
 
-**Challenge 4: Evaluation Objectivity**
-- ❌ Problem: Subjective "looks good" testing insufficient
-- ✅ Solution: 5 quantifiable automated metrics
+🚀 Future Enhancements
+v2.0
 
-### Insights
-- 🎯 **Specialization wins** - Focused agents outperform monolithic designs
-- 📊 **Observability is critical** - Can't debug what you can't see
-- 💾 **Memory transforms UX** - Remembering preferences = 10x better personalization
-- ⚡ **Iteration limits essential** - Prevents runaway costs
+Real-time booking APIs
 
----
+Weather-aware scheduling
 
-## 🚀 Future Enhancements
+Multi-city trips
 
-### Near-term (v2.0)
-- [ ] Real-time booking API integration (Booking.com, Expedia)
-- [ ] Weather-aware planning (avoid rainy days)
-- [ ] Multi-city trip support
-- [ ] Flight search and booking
-- [ ] Restaurant reservations via OpenTable
+Flight search
 
-### Long-term (v3.0)
-- [ ] Agent-to-Agent (A2A) protocol for marketplace
-- [ ] Collaborative multi-user planning
-- [ ] Real-time price monitoring and alerts
-- [ ] Carbon footprint optimization
-- [ ] Mobile app (iOS/Android)
+Restaurant reservations
 
-### Deployment Ready
-- ✅ Cloud Run deployment configuration
-- ✅ Agent Engine integration
-- ✅ API endpoint for web/mobile apps
+v3.0
 
----
+Multi-user collaborative planning
 
-## 📝 License
+Continuous price monitoring
 
-This project is licensed under CC BY-SA 4.0. See [LICENSE](./LICENSE) for details.
+Carbon footprint optimization
 
-## 🙏 Acknowledgments
+Mobile app
 
-- Built for the [Kaggle AI Agents Intensive Capstone](https://www.kaggle.com/competitions/agents-intensive-capstone-project)
-- Uses Google's [Agent Development Kit (ADK)](https://github.com/google/adk)
-- Powered by [Gemini AI](https://ai.google.dev/)
+📝 License
 
-## 📧 Contact
+Licensed under CC BY-SA 4.0.
+See LICENSE
+.
 
-For questions or collaboration:
-- Kaggle: [@YourUsername](https://www.kaggle.com/yourusername)
-- GitHub Issues: [Report a bug](https://github.com/yourusername/trip-planner-agent/issues)
+🙏 Acknowledgments
 
-## 🎥 Demo Video
+Built for the Kaggle AI Agents Intensive Capstone
 
-[Watch the 3-minute demo](https://youtu.be/your-video-id) (optional, for bonus points)
+Using Google ADK & Gemini AI
 
----
+📧 Contact
 
-**Built with ❤️ using Google ADK and Gemini AI**
-#   T r i p - P l a n n e r - A s s i s t a n t 
- 
- #   T r i p - P l a n n e r - A s s i s t a n t 
- 
- 
+Kaggle: Add your profile link
 
+GitHub Issues: Repo issues link
 
+🎥 Demo
+
+🎬 3-minute demo video:
+https://www.youtube.com/watch?v=your-video-id
+
+Built with ❤️ using Google ADK and Gemini AI
