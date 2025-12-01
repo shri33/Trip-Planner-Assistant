@@ -1,5 +1,3 @@
-<div align="center">
-
 # 🌍 Trip Planner Assistant
 
 ### *Multi-Agent AI System for Intelligent Travel Planning*
@@ -418,4 +416,5 @@ For questions or collaboration:
  #   T r i p - P l a n n e r - A s s i s t a n t 
  
  
+
 
